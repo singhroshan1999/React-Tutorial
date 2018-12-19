@@ -1,10 +1,11 @@
 import React from 'react';
 import Person from './person/person';
+import Radium,{StyleRoot} from 'radium';
 
 const persons = (props) => {
     if(props.states.show){
         return (
-            
+            <StyleRoot>
                 <div>
                     {
                         props.states.property.map((p,indx) => {
@@ -17,10 +18,10 @@ const persons = (props) => {
                         })
                     }
                 </div>
-            
+                </StyleRoot>
         )
     }
     return null;
 };
 
-export default persons;
+export default Radium(persons);

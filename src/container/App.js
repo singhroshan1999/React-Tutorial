@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Cockpit from '../cockpit/cockpit';
 import Persons from '../persons/persons.js';
+import Radium from 'radium';
 
 class App extends Component {
   state = {
@@ -45,4 +46,4 @@ hideHandler = ()=>{
   }
 }
 
-export default App;
+export default Radium(App);
